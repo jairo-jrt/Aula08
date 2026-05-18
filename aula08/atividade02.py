@@ -7,7 +7,7 @@
 # A fórmula utilizada para o cálculo é: 
 # IMC = peso / (altura × altura)
 
-def calculo_imc(x, y):
+def calc_imc(x, y):
     i = x / (y ** 2)
     return i
 
@@ -18,21 +18,21 @@ while True:
     peso = float(input('\nInforme o peso (Kg): '))
     altura = float(input('Informe a altura (m): '))
 
-    imc = calculo_imc(peso, altura)
+    imc = calc_imc(peso, altura)
     
     print(f'\nIMC = {imc:.2f}')
 
     match imc:
 
-        case imc if imc < 16.9:
+        case imc if imc < 17:
             print('Muito abaixo do peso')
-        case imc if imc <= 18.4:
+        case imc if imc < 18.5:
             print('Abaixo do peso')
-        case imc if imc <= 24.9:
+        case imc if imc < 25:
             print('Peso normal')
-        case imc if imc <= 29.9:
+        case imc if imc < 30:
             print('Acima do peso')
-        case imc if imc <= 34.9:
+        case imc if imc < 35:
             print('Obesidade Grau I')
         case imc if imc <= 40:
             print('Obesidade Grau II')
